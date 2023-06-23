@@ -16,10 +16,10 @@
 
 def print_operation_multiplication(operation, num_rows, num_columns):
     table = []
-    for i in range(num_columns):
+    for i in range(num_rows):
         incom_list = []
         table.append(incom_list)
-        for j in range(num_rows):
+        for j in range(num_columns):
             incom_list.append(operation(i + 1, j + 1))
             if j == 0: print(table[i][j], end='')
             else: print(f'\t{table[i][j]}', end='')
@@ -27,10 +27,10 @@ def print_operation_multiplication(operation, num_rows, num_columns):
 
 def print_operation_sum(operation, num_rows, num_columns):
     table = []
-    for i in range(num_columns):
+    for i in range(num_rows):
         incom_list = []
         table.append(incom_list)
-        for j in range(num_rows):
+        for j in range(num_columns):
             if j == 0:
                 incom_list.append(i + 1)
                 print(table[i][j], end='')
